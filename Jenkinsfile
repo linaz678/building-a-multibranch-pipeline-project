@@ -19,8 +19,7 @@ pipeline {
                 sh './jenkins/scripts/test.sh'
             }
         }
-    }
-    stage('Deliver for development') {
+   stage('Deliver for development') {
             when {
                 branch 'development'
             }
@@ -40,6 +39,8 @@ pipeline {
                 sh './jenkins/scripts/kill.sh'
             }
     }
+    }
+ 
 
 
 
