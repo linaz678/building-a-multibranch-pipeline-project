@@ -29,8 +29,8 @@ pipeline {
                 input message: 'Finished using the web site? (Click "Proceed" to continue)'
                 sh './jenkins/scripts/kill.sh'
             }
-        }
-        stage('Deploy for production') {
+    }
+    stage('Deploy for production') {
             when {
                 branch 'production'
             }
